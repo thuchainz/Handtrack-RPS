@@ -1,0 +1,157 @@
+.home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #C8DBBE;
+    font-family: 'Avenir';
+}
+
+details {
+    background: #accb9d;
+    margin-bottom: 15px;
+    letter-spacing: .8px;
+    line-height: 20px;
+    text-align: center;
+    box-shadow: 0px 4px #678358;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+details > p {
+    text-align: left;
+    padding-left: 10px;
+    padding-right: 5px;
+}
+  
+summary {
+    font-family: 'Avenir';
+    font-size: 15px;
+    color: white;
+    font-weight: 700;
+    padding: 15px;
+    display: block;
+    background: #92b57f;
+    padding-left: 30px;
+    position: relative;
+    cursor: pointer;
+}
+  
+summary:before {
+    content: '';
+    border-width: .4rem;
+    border-style: solid;
+    border-color: transparent transparent transparent #fff;
+    position: absolute;
+    top: 1.1rem;
+    left: 1rem;
+    transform: rotate(0);
+    transform-origin: .2rem 50%;
+    transition: .25s transform ease;
+}
+
+details[open] > summary:before {
+    transform: rotate(90deg);
+}
+
+.rules {
+    border: 3px solid white;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 24px;
+    color: black;
+    text-shadow: 2px 2px white;
+}
+
+.parent1 {
+    width: 200px;
+    padding-top: -5%;
+}
+
+.parent2 {
+    width: 400px;
+}
+
+.child1 {
+    width: 50%;
+    float: left;
+}
+
+.child2 {
+    width: 50%;
+    float: right;
+}
+
+.child2 > h1 {
+    text-align: right;
+}
+
+h2 {
+    font-size: medium;
+    text-align: center;
+}
+
+img {
+    height: 100px;
+    padding-left: 55px;
+}
+
+.button {
+    appearance: button;
+    background-color: #678358;
+    border: solid transparent;
+    border-radius: 16px;
+    border-width: 0 0 4px;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Avenir';
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: .8px;
+    line-height: 20px;
+    margin: 0;
+    overflow: visible;
+    padding: 13px 16px;
+    text-align: center;
+    text-transform: uppercase;
+    touch-action: manipulation;
+    transform: translateZ(0);
+    transition: filter .2s;
+    white-space: nowrap;
+    width: 160px;
+  }
+  
+  .button:after {
+    background-clip: padding-box;
+    background-color: #92b57f;
+    border: solid transparent;
+    border-radius: 16px;
+    border-width: 0 0 4px;
+    bottom: -4px;
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+  }
+  
+  .button:main,
+  .button:focus {
+    user-select: auto;
+  }
+  
+  .button:hover:not(:disabled) {
+    filter: brightness(1.1);
+    -webkit-filter: brightness(1.1);
+  }
+  
+  .button:disabled {
+    cursor: auto;
+  }
+
+footer {
+    height: 20px;
+}

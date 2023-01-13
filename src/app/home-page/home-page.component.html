@@ -1,0 +1,49 @@
+<div class="home">
+    <h1>Let's play Rock, Paper, Scissors</h1>
+
+    <details>
+        <summary>HOW TO PLAY</summary>
+        <p>Start each round by showing <strong>TWO OPEN HANDS</strong>.<br>
+            Show your move and the computer will automatically respond.<br>
+            Double the stakes by showing <strong>2</strong> moves, one per hand.<br>
+            Reset the scoreboard by showing <strong>TWO CLOSED HANDS</strong>.</p>
+    </details>
+
+    <app-handtracker (onPrediction)="prediction($event)"></app-handtracker>
+    <!--<div [innerHTML]="gesture"></div>-->
+
+    <p *ngIf="!playing">Start new round</p>
+    <p *ngIf="playing">Show your move</p>
+
+    <div class="parent1">
+        <div class="child1">
+            <h1>Scoreboard</h1>
+        </div>
+        <div class="child2">
+            <h1>{{ scores[1] }} - {{ scores[0] }}</h1>
+        </div>
+    </div>
+
+    <div class="parent2">
+        <div class="child1">
+            <h2 >Computer: {{ computerMove }}</h2>
+            <img [src]="changeImage(computerMove)"/>
+        </div>
+        <div class="child2">
+            <h2>You: {{ playerMove }}</h2>
+            <img [src]="changeImage(playerMove)"/>
+        </div>
+    </div>
+    <h1>{{ result }}</h1>
+
+    <button class="button" (click)="reset()">Reset</button>
+    <footer></footer>
+</div>
+
+
+
+
+
+
+
+
